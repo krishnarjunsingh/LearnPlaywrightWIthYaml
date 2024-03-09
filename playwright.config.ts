@@ -52,6 +52,10 @@ export default defineConfig({
     {
       name: 'iphoneSafari',
       use: { ...devices['iPhone 14 Plus'] },
+    },
+    {
+      name: 'androidChrome',
+      use: { ...devices['Galaxy S9+'] },
     }
 
     /* Test against mobile viewports. */

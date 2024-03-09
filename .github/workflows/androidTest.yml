@@ -1,9 +1,11 @@
-name: Playwright Specific Tests
+name: Android Tests
 on:
   push:
+    branches: [ main, master ]
   pull_request:
+    branches: [ main, master ]
 jobs:
-  titleRun:
+  android:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +18,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test --project=iphoneSafari -g "has title"
+      run: npx playwright test --project=androidChrome
     - uses: actions/upload-artifact@v4
       if: always()
       with:
