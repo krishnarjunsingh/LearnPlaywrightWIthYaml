@@ -1,1 +1,1 @@
-Learn Yaml implementatin with Playwright to run the tests
+Learn Yaml implementatin with Playwright to run the tests.
