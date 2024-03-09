@@ -1,4 +1,7 @@
 name: Playwright Specific Tests
+on:
+  push:
+  pull_request:
 jobs:
   titleRun:
     timeout-minutes: 60
