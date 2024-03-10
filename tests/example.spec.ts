@@ -1,7 +1,11 @@
 import { test, expect } from '@playwright/test';
+import ENV from '../utils/env';
 
 test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  const url = ENV.BASE_URL;
+  //const url = process.env.BASE_URL;
+  console.log(url);
+  await page.goto(url);
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
